@@ -41,5 +41,3 @@ const counterSlice = createSlice({
 
 export const { incremented, decremented } = counterSlice.actions;
 export default counterSlice.reducer;
-
-console.log(incremented());
