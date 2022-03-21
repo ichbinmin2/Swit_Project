@@ -25,7 +25,7 @@ const chattingSlice = createSlice({
       // return { value: [...state.value, action.payload] }
     },
     deleted: (state, action: PayloadAction<string>) => {
-      state.value = state.value.filter((msg) => msg.id !== action.payload); // immer
+      state.value = state.value.filter((msg) => msg.id !== action.payload); // immer 버전
       // return { value: state.value.filter((msg) => msg.id !== action.payload) } // 불변성 버전
     },
   },
