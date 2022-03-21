@@ -32,3 +32,5 @@ ReactDOM.render(
 
 // yarn add redux react-redux
 // yarn add -D @types/react-redux
+// https://redux-toolkit.js.org/tutorials/quick-start
+// https://ko.redux.js.org/introduction/getting-started/
