@@ -3,14 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 // default 값은... 3명이 5건의 메세지
 // 대화 목록 => Array<Message>
 // Message ? => 보낸 사람, 날짜, 내용
-type Message = {
-  id: string;
-  userId: string;
-  userName: string;
-  profileImage: string; // 이미지 주소
-  content: string;
-  date: string; // yyyy-mm-dd hh:MM:ss
-};
+
 
 // 과거형
 // sent 보내짐
@@ -21,7 +14,9 @@ const chattingSlice = createSlice({
   initialState: { value: [] as Message[] },
   reducers: {
     sent: (state, action: PayloadAction<Message>) => {
-      state.value = [...state.value, action.payload];
+      if(action.payload.content !== ""){
+        state.value = [...state.value, action.payload];
+      };
       // return { value: [...state.value, action.payload] }
     },
     deleted: (state, action: PayloadAction<string>) => {
